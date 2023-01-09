@@ -1,14 +1,16 @@
 //Styles
+import './styles/_variables.scss';
 import 'normalize.css';
-import './styles/styles.scss';
+import './styles/index.scss';
 import './styles/nav.scss';
-
+import './styles/main.scss'
 // Assets
 import menuIcon from './assets/menu.svg'
 
 // Components
 import Nav from "./components/Nav";
 import IconButton from './components/IconButton';
+import Main from './components/Main';
 
 const App = () => {
   return (
@@ -17,19 +19,9 @@ const App = () => {
         <IconButton text='Home' href='/' />
         <IconButton src={menuIcon} label='Menu' href='/' />
       </Nav>
-      <main>
-        <p>Hello there, I'm</p>
-        <h1>
-          Chheang
-        </h1>
-        <p>and, I'm:</p>
-        <ul>  
-          <li>a prospect for AUPP</li>
-          <li>a debate enthusiast</li>
-          <li>a full-stack developer</li>
-        </ul>
-        <button>Not clear?</button>
-      </main>
+      <Main>
+        
+      </Main>
     </div>
   )
 }

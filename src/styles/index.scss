@@ -1,7 +1,7 @@
 @font-face {
   font-family: DIN;
   src: url('../assets/DIN-Regular.ttf');
-  font-weight: normal;
+  font-weight: 300;
 }
 
 @font-face {
@@ -13,23 +13,26 @@
 @font-face {
   font-family: DIN;
   src: url('../assets/DIN-Bold.ttf');
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @font-face {
   font-family: DIN;
   src: url('../assets/DIN-Medium.ttf');
-  font-weight: medium;
+  font-weight: 400;
 }
 
-$background-color: #16a34a;
-$text-color: #f8fafc;
-$black-text-color: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@200;400;500;600;700&display=swap');
+
+@import './variables.scss';
 
 body {
   font-family: DIN;
   background-color: $background-color;
   
+  ul {
+    padding-left: 1rem;
+  }
   div, p, a {
     font-weight: 200;
     font-size: 1.25rem;
@@ -38,19 +41,18 @@ body {
     padding: 0;
   }
 
-  h1 {
-    color: $black-text-color;
+  h1, h2{
     margin: 0;
   }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    padding: 1rem;
-  }
+}
+
+.khmer-text {
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .icon {

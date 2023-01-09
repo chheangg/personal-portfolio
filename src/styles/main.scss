@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  * {
+    margin: 0;
+    line-height: 1;
+  }
+
+  p {
+    word-spacing: 1.2;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $light-green;
+  }
+  
+  .name {
+    color: $dark-green;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .statement {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: $gray;
+  }
+
+  .amber {
+    color: $amber;
+  }
+}
+
+.upper-main {
+  padding: 0 1rem;
+}
+
+.bottom-main {
+  height: 25%;
+}
