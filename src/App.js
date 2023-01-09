@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+//Styles
+import 'normalize.css';
+import './styles/styles.scss';
+import './styles/nav.scss';
 
-function App() {
+// Assets
+import menuIcon from './assets/menu.svg'
+
+// Components
+import Nav from "./components/Nav";
+import IconButton from './components/IconButton';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav>
+        <IconButton text='Home' href='/' />
+        <IconButton src={menuIcon} label='Menu' href='/' />
+      </Nav>
+      <main>
+        <p>Hello there, I'm</p>
+        <h1>
+          Chheang
+        </h1>
+        <p>and, I'm:</p>
+        <ul>  
+          <li>a prospect for AUPP</li>
+          <li>a debate enthusiast</li>
+          <li>a full-stack developer</li>
+        </ul>
+        <button>Not clear?</button>
+      </main>
     </div>
-  );
+  )
 }
 
 export default App;

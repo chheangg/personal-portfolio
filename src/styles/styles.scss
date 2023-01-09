@@ -1,0 +1,59 @@
+@font-face {
+  font-family: DIN;
+  src: url('../assets/DIN-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: DIN;
+  src: url('../assets/DIN-Light.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: DIN;
+  src: url('../assets/DIN-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: DIN;
+  src: url('../assets/DIN-Medium.ttf');
+  font-weight: medium;
+}
+
+$background-color: #16a34a;
+$text-color: #f8fafc;
+$black-text-color: #171717;
+
+body {
+  font-family: DIN;
+  background-color: $background-color;
+  
+  div, p, a {
+    font-weight: 200;
+    font-size: 1.25rem;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: $black-text-color;
+    margin: 0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 1rem;
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+}
