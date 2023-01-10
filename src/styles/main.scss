@@ -2,10 +2,17 @@
 
 .main-container {
   height: 100vh;
+  grid-template-rows: auto auto;
+  display: grid;
+}
+
+.upper-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: end;
+  padding: 0 1rem;
+  margin-bottom: 5vh;
 
   * {
     margin: 0;
@@ -13,34 +20,134 @@
   }
 
   p {
-    word-spacing: 1.2;
     line-height: 1.5rem;
     font-size: 1rem;
     font-weight: 300;
-    color: $light-green;
+    color: $text-color;
+  }
+
+  .intro {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
   }
   
   .name {
-    color: $dark-green;
+    color: $accent-color;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
   }
   
   .statement {
     font-weight: 600;
     font-size: 2.5rem;
-    color: $gray;
+    color: $text-color;
+    margin-bottom: 0.5rem;
   }
 
-  .amber {
-    color: $amber;
+  .accent {
+    color: $accent-color;
   }
-}
-
-.upper-main {
-  padding: 0 1rem;
 }
 
 .bottom-main {
-  height: 25%;
+  padding: 0 1rem;
+
+  .quick-nav-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid #1e293b;
+    border-radius: calc(10px + 0.5rem);
+ 
+    .quick-nav-title {
+      display: block;
+      background-color: $accent-color;  
+      color: $base-color;
+      border: 0;
+      padding: 0.25rem  1rem;
+      border-top-right-radius: calc(10px + 0.5rem);
+      border-top-left-radius: calc(10px + 0.5rem);;
+    }
+
+    .quick-nav {
+      margin: 0;
+      padding: 0.5rem;
+      gap: 0.5rem; 
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      align-items: center;
+    }
+
+    .quick-nav-element {
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: $text-color;
+      list-style: none; 
+      color: $accent-color; 
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      border: 2px solid $accent-color;
+
+    }
+
+    h3 {
+      display: flex;
+      align-self: center;
+      margin: 0;  
+      font-size: 1.5rem;
+      font-weight: 6  00;
+
+      img {
+        width: auto;
+        height: 2rem;
+      }
+    }
+  }
+
+  .quick-link-container {
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .quick-link {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+      gap: 0.5rem;
+      padding: 0;
+
+      * {
+        font-size: 1rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem; 
+      }
+
+      span {
+        color: $text-color  ;
+      }
+
+      i { 
+        font-size: 1.25rem;
+      }
+
+      li {
+        background-color: $base-color;
+        border: 1px dashed $text-color;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    }
+  }
 }
+
+
+@media (min-width: 1000px) {
+  .upper-main, .bottom-main {
+    padding: 0 20vw;
+  } 
+} 

@@ -11,6 +11,7 @@ import menuIcon from './assets/menu.svg'
 import Nav from "./components/Nav";
 import IconButton from './components/IconButton';
 import Main from './components/Main';
+import Header from './components/Header';
 
 const App = () => {
   return (
@@ -19,9 +20,7 @@ const App = () => {
         <IconButton text='Home' href='/' />
         <IconButton src={menuIcon} label='Menu' href='/' />
       </Nav>
-      <Main>
-        
-      </Main>
+      <Main />
     </div>
   )
 }
